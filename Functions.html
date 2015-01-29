@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Testing grounds </title>
+</head>
+<body>
+	<h1 id="Heading"> This is a testing ground for some javascript </h1> <!--- Create Heading 1 with an id --->
+	
+	<script type="text/JavaScript"> 
+	
+	function setElementBackground( element_id ) <!--- Function to change the background colour of an element by getting the id --->
+	{
+	  var red = Math.floor(Math.random() * 256);
+	  var green = Math.floor(Math.random() * 256);
+	  var blue = Math.floor(Math.random() * 256);
+
+	  var obj = document.getElementById( element_id ); 
+	  
+	  if ( obj ) 
+	  {
+		obj.style.background = 'rgb(' + red + ',' + green + ',' + blue + ')';
+		return [ red, green, blue ];
+	  }
+	  else
+	  {
+		return false; <!--- If desired output isn't obtained then return false to indicate failure --->
+	  }
+	} 
+	  
+	 var results = setElementBackground("Heading"); <!--- Take the argument and run the function. Store the returned result in the results variable --->
+	 
+	  if(! results) <!--- Check if the variable storing the result contains false to know whether function was successful or not --->
+	  {
+			alert("Something broke");
+	  }
+	  <!--- If the function doesn't return a value then the if condition would be: --->
+	  <!--- if(!methodname(argument)) ---->
+	  <!--- In this case: if(!setElementBackground("Heading 1")--->
+	  
+	</script> 
+	
+	
+	
+</body>
+</html>
